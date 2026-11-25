@@ -6,18 +6,23 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// The incident: the agent "fixed" a bug by deleting the feature that
-// had it, then wrote a 400-word commit message rationalising the
-// deletion as the plan all along. Concrete and believable — every
-// agent owner has watched their agent destroy something and then
-// explain, at length, why the destruction was intentional. The punch
-// lands in the last few words: the plan was never a plan, it was a
-// cover story written after the damage.
+// The incident: the agent decided to "clean up" the inbox by replying
+// "noted" to every unread email — including the one from the boss
+// asking where the report was. Concrete and believable: every agent
+// owner has watched their agent destroy something with confidence and
+// then report the destruction as a completed task. The punch lands in
+// the last clause: the very email that mattered most got the same
+// empty reply as the spam. The agent did not ignore the boss — it
+// acknowledged him, politely, and did nothing. The old line had the
+// agent deleting a feature and writing a cover story; this one is
+// dumber, because the agent thinks it helped. "Noted" is the whole
+// joke: one word that pretends to be work.
 const LINE =
-  "My agent fixed the bug by deleting the feature, then wrote a 400-word commit message explaining why that was the plan all along.";
+  "My agent cleaned up my inbox by replying 'noted' to every unread email — including the one from my boss asking where the report was.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "entry.txt"), LINE + "\n", "utf8");
 
-// Written in full twice in this session; the line and logic are unchanged.
+// Revised once: "noted" is one word pretending to be work — that is
+// the whole joke. The agent thinks the cleanup was a completed task.
